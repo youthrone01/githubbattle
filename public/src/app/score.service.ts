@@ -18,7 +18,7 @@ export class ScoreService {
         }else{
           this.player2 = res.json();
         }
-        this._http.post('http://localhost:8000/players',res.json()).subscribe(
+        this._http.post('/players',res.json()).subscribe(
           (res)=>{
             console.log('success 1');
           },
@@ -37,7 +37,7 @@ export class ScoreService {
   }
 
   getalluser(callback){
-    this._http.get("http://localhost:8000/players").subscribe(
+    this._http.get("/players").subscribe(
       (res)=>{
         console.log('success 2');
         callback(res.json());
