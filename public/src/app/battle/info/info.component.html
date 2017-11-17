@@ -1,0 +1,38 @@
+<div class="box">
+  <div class="col">
+      
+    <div [ngClass]="{hide:getuser1}" class="player" >
+      <form (submit)="onSubmit('first')" #formData1 = "ngForm">
+        <h2>Player 1</h2>
+        Github Username: <input type="text" name="username1" required
+        [(ngModel)]="username1" #name="ngModel"> {{name.errors | json}}<br><br>
+
+        <input type="submit" [disabled]="!formData1.valid" value="Get User">
+      </form>
+    </div>
+
+    <div [ngClass]="{hide:!getuser1}" class="player">
+      <img src="{{user1?.avatar_url}}" alt="user1">
+      <h3>{{user1?.name}}<span *ngIf="user1?.name==null">Do not have a name</span></h3>
+    </div>
+  </div>
+    
+  <div class="col">
+      
+    <div [ngClass]="{hide:getuser2}" class="player" >
+      <form (submit)="onSubmit('second')" #formData2 = "ngForm">
+        <h2>Player 2</h2>
+        Github Username: <input type="text" name="username2" required
+        [(ngModel)]="username2" #name="ngModel"> {{name.errors | json}}<br><br>
+
+        <input type="submit" [disabled]="!formData2.valid" value="Get User">
+      </form>
+    </div>
+
+    <div [ngClass]="{hide:!getuser2}" class="player">
+      <img src="{{user2?.avatar_url}}" alt="user2">
+      <h3>{{user2?.name}}<span *ngIf="user2?.name==null">Do not have a name</span></h3>
+    </div>
+  </div>
+  <button [ngClass]="{hide:btn !=2}" id="battle" (click)="battle()">BATTLE</button>
+</div>

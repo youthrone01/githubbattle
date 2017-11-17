@@ -1,0 +1,7 @@
+<img src="{{first?.avatar_url}}" alt="first"><br>
+<h1>1st Place</h1>
+<h3>{{first?.name}} <span *ngIf="first?.name==null">Do not have a name</span>(Score):{{(first?.public_repos+first?.followers)*12}}</h3><br><br>
+<h1>2nd Place</h1>
+<h3>{{second?.name}} <span *ngIf="second?.name==null">Do not have a name</span>(Score):{{(second?.public_repos+second?.followers)*12}}</h3><br>
+
+<button (click)="reset()">RESET</button>

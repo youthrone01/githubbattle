@@ -1,0 +1,36 @@
+.box{
+    height: 500px;
+    width: 970px;
+    overflow: scroll;
+}
+
+#battle{
+    background-color: green;
+    width: 600px;
+    height: 30px;
+}
+.player{
+    height: 320px;
+    width: 400px;
+    margin-left: 20px;
+    border: 1px solid black;
+}
+img {
+    height: 250px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.col{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.hide{
+    display: none;
+}
+
+button{
+    margin-top: 20px;
+    margin-left: 100px;
+}

@@ -1,0 +1,19 @@
+.box{
+    height: 600px;
+    width: 970px;
+    overflow: scroll;
+}
+
+.box2{
+    height: 320px;
+    width: 400px;
+    margin-left: 20px;
+    border: 1px solid black;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
